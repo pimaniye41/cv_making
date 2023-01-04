@@ -1,0 +1,66 @@
+---
+name: Efe
+surname: Gülkan
+position: "Student"
+address: "Kartal - İstanbul"
+phone: +90 (545) 326 0872
+www: 
+email: "efe.gulkan@outlook.com"
+github: pimaniye41
+linkedin: efegulkan
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  vitae::markdowncv:
+    page_total: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+
+# Summary
+
+ * Ambitious 2nd year economics student who is willing to learn data science and work in data analysis field after graduation. Primary **R** language user with my analysis. Goal-oriented and practical approaches to projects. Plan to increase my knowledge in the field by internships and courses.
+
+# Education
+
+```{r}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where, ~Courses,
+  "Economics", "2020-", "Bahcesehir University", "Istanbul, Türkiye", "Introduction to Economics I-II, Data Science with R, Statistics for Economics I-II"
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where, Courses)
+```
+
+# Projects
+
+```{r}
+tribble(
+  ~Year, ~Type, ~Desc,
+  2022, "Sectoral Analysis", "Compared 400 BIST TUM firms' and 16 sectors' change in employee numbers and financials over 7 years in **R language**. - Completed",
+  2022, "Getting data from CBTR EVDS to R using API", "Used API to import xml data to R, then converting it to data frame. - Completed",
+  2022, "Employment and Election Analysis", "Comparing public employment and election results of provinces of Türkiye in **R language** - Ongoing",
+  2023,"Web App", "Implementing basic statistical distributions into a **Shiny** web app - Ongoing",
+  2023, "Web App","Implementing my Sectoral Analysis project into a web app with simple user interface on **Shiny** to filter years and sectors - Ongoing"
+  
+) %>% 
+  detailed_entries(what = Type, when=Year, why= Desc
+  )
+```
+## Links
+
+* [Sectoral Analysis of BIST TUM firms and sectors](https://github.com/pimaniye41/R4DS_final_final)
+* [Getting Data from CBRT EVDS](https://github.com/pimaniye41/evds_data)
+* [Employment and Election Analysis](https://github.com/pimaniye41/employment_election)
+* [Statistical Distributions Web App](https://github.com/pimaniye41/sample_calc)
+
+
+## Certificates and Courses
+* [What is Data Science by IBM Skills Network](https://www.coursera.org/account/accomplishments/verify/997HSSDB567B)
+* [2nd Annual Bilkent Computational Social Sciences Summit Day 1 by Bilkent Social Sciences Society](https://bilkent-university-social-scie.verified.cv/en/verify/74268007028910) 
+* [2nd Annual Bilkent Computational Social Sciences Summit Day 2 by Bilkent Social Sciences Society](https://bilkent-university-social-scie.verified.cv/en/verify/80720640647565)
+* [Tools for Data Science by IBM Skills Network, ongoing](https://www.coursera.org/learn/open-source-tools-for-data-science?specialization=ibm-data-science)
+* [Google Data Analytics Professional Certificate, ongoing](https://www.coursera.org/professional-certificates/google-data-analytics#courses)
+
